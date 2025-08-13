@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ai-buddy-backend
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+    rootDir: .
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: RUNWAY_API_KEY
+        sync: false
+      - key: PIKA_API_KEY
+        sync: false
+      - key: BASE_URL
+        sync: false
